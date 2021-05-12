@@ -1,0 +1,6 @@
+nome = input('Qual é seu nome?')
+print('É um prazer te conhecer, {}!'.format(nome))
+n1 = int (input('Digite um numero:'))
+n2 = int (input ('Digite um outro numero:'))
+s = (n1) + (n2)
+print('A soma vale {}!'.format(s))

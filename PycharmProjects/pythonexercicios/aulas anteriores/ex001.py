@@ -1,0 +1,7 @@
+nome = input('Qual seu nome?')
+print('Olá,', nome, 'seja bem vindo')
+idade = input('Qual a sua idade?')
+aniversario = input('Qual seu aniversario ?')
+print('Recapitulando seu nome é', nome, 'você faz aniversario', aniversario, 'e neste ano você tem', idade,'anos')
+print('Que legal prazer em conhecer!!🤞')
+print('Tchau!')
