@@ -12,7 +12,7 @@ nasc = int(input("Qual o ano de nascimento: "))
 idade = date.today().year - nasc
 
 print(f"Olá, seu nome é {nome} e tem {idade} anos!")
-'''
+
 soma = num = media = valor = 0
 nota = 1
 for c in range(0, 3):
@@ -27,7 +27,7 @@ for c in range(0, 3):
         media = 0
         break
 print(f"A media do aluno é de {media}")
-'''
+
 oposto = float(input("Digite o valor do cateto oposto: "))
 adjascente = float(input("Digite o valor do cateto adjascente: "))
 hipotenusa = float(input("Digite o valor da hipotenusa: "))
