@@ -32,3 +32,41 @@ janela.plot(320,320,"Red")
 janela.getMouse()
 janela.close()
 '''
+
+from graphics import *
+import time
+
+janela = GraphWin("Fazer um X na tela ...", 400, 400)
+
+# Diagonal principal
+for posicao in range(400):
+   ponto = Point(posicao, posicao)
+   ponto.setFill(color_rgb(150, 255, 150))
+   ponto.draw(janela)
+   time.sleep(0.01)
+
+   ponto = Point(399-posicao, posicao)
+   ponto.setFill(color_rgb(150, 255, 150))
+   ponto.draw(janela)
+
+   ponto = Point(posicao, 398)
+   ponto.setFill(color_rgb(150, 255, 150))
+   ponto.draw(janela)
+
+   ponto = Point(399 - posicao, 0 )
+   ponto.setFill(color_rgb(150, 255, 150))
+   ponto.draw(janela)
+
+   ponto = Point(0 ,399 - posicao)
+   ponto.setFill(color_rgb(150, 255, 150))
+   ponto.draw(janela)
+
+   ponto = Point(398, posicao)
+   ponto.setFill(color_rgb(150, 255, 150))
+   ponto.draw(janela)
+
+
+# Aguardando um clique de mouse para fechar a janela
+janela.getMouse()
+janela.close()
+
