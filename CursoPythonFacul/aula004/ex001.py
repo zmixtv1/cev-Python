@@ -26,12 +26,27 @@ for c in range(0, 3):
         print("Digite um valor valido")
         media = 0
         break
-print(f"A media do aluno é de {media}")'''
+print(f"A media do aluno é de {media}")
 
-from math import sin, cos, tan
 oposto = float(input("Digite o valor do cateto oposto: "))
-adjascente = float(input("Digite o valor do cateto adjascente"))
-hipotenusa = float(input("Digite o valor da hipotenusa"))
+adjascente = float(input("Digite o valor do cateto adjascente: "))
+hipotenusa = float(input("Digite o valor da hipotenusa: "))
 
-seno = 30
-print(sin(seno))
+sen = oposto / hipotenusa
+cos = adjascente / hipotenusa
+tg = oposto / adjascente
+
+print(f"O sen dos agulos é {sen}")
+print(f"O Cos dos angulos é {cos}")
+print(f"A tag dos angulos é {tg}")
+
+
+
+n1 = int(input("Digite um numero: "))
+pot = n1 ** 2
+print(f"O valor da conta é {pot % 3}")
+'''
+
+frase = str(input("Digite uma frase: "))
+print(len(frase))
+
