@@ -36,23 +36,23 @@ janela.close()
 from graphics import *
 import time
 
-janela = GraphWin("Fazer um X na tela ...", 400, 400)
+janela = GraphWin("Fazer um X na tela ...", 600, 600)
 
 # Diagonal principal
-for posicao in range(400):
+for posicao in range(600 ):
    ponto = Point(posicao, posicao)
-   ponto.setFill(color_rgb(150, 255, 150))
+   ponto.setFill(color_rgb(150, 230, 150))
    ponto.draw(janela)
    time.sleep(0.01)
 
-   ponto = Point(399-posicao, posicao)
-   ponto.setFill(color_rgb(150, 255, 150))
+   ponto = Point(599-posicao, posicao)
+   ponto.setFill(color_rgb(150, 230, 150))
    ponto.draw(janela)
 
-   ponto = Point(posicao, 398)
+   ponto = Point(posicao, 599)
    ponto.setFill(color_rgb(150, 255, 150))
    ponto.draw(janela)
-
+'''
    ponto = Point(399 - posicao, 0 )
    ponto.setFill(color_rgb(150, 255, 150))
    ponto.draw(janela)
@@ -70,3 +70,4 @@ for posicao in range(400):
 janela.getMouse()
 janela.close()
 
+'''
