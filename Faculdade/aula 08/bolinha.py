@@ -21,7 +21,7 @@ circulo.setFill(color_rgb(10, 10, 100))
 circulo.draw(win)
 
 pts = 0
-pontos=Text(Point(400, 575), "Pontos: " + str(pts))
+pontos = Text(Point(400, 575), "Pontos: " + str(pts))
 pontos.setSize(14)
 pontos.draw(win)
 
@@ -54,6 +54,7 @@ while continuar:
 
   if lin == 515 and col > colIni and col < (colIni+tamanho):
       velocidade = -velocidade
+      pts += 1
 
   # Nova posição do círculo
   circulo.undraw()
