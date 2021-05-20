@@ -13,7 +13,7 @@ segundo_retangulo.setOutline("black")
 segundo_retangulo.draw(janela)
 
 terceiro_retangulo = Rectangle(Point(530, 200), Point(370,350))
-terceiro_retangulo.setFill("red")
+terceiro_retangulo.setFill("blue")
 terceiro_retangulo.setOutline("black")
 terceiro_retangulo.draw(janela)
 
