@@ -1,5 +1,4 @@
-
-while True:
+for c in range(0, 3):
     tabuada = int(input("Quer ver a tuabuada de qual valor? "))
     print("_"*15)
     if tabuada < 0:
