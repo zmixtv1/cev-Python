@@ -17,4 +17,4 @@ for c in range(0, 3):
     galera.append(dados[:])
     dados.clear()
 
-print(galera)
+for p in galera
