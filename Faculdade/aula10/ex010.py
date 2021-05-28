@@ -1,4 +1,4 @@
-from graphics import *
+'''from graphics import *
 from time import sleep
 janela = GraphWin("Desafio", 800, 800)
 
@@ -35,3 +35,31 @@ while tecla != 'Escape':
 
 if tecla == "Escape":
     janela.close()
+'''
+
+from graphics import *
+import random
+
+janela = GraphWin("Aleatorio", 800, 800)
+
+tecla = ''
+while tecla != 'Escape':
+    tecla = janela.getKey()
+
+    a = random.randrange(0, 800)
+    b = random.randrange(0, 800)
+    c = random.randrange(0, 800)
+    d = random.randrange(0, 800)
+    p = Polygon(Point(a, b),
+                Point(a, b),
+                Point(c, d),
+                Point(d, c))
+    p.setFill(color_rgb(random.randint(0, 255),
+                        random.randint(0, 255),
+                        random.randint(0, 255)))
+
+    p.draw(janela)
+    if tecla == "Escape":
+        janela.close()
+
+janela.close()
