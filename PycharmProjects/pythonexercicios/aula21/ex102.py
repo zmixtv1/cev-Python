@@ -1,4 +1,4 @@
-def fatorial(num=1, show = False):
+def fatorial(num=1, show=False):
     """
     Calcula o fatorial de um numero.
     :param n: O numero a ser calculado.
@@ -9,7 +9,7 @@ def fatorial(num=1, show = False):
     for c in range(num, 0,-1):
         if show:
             print(c, end="")
-            if c >1:
+            if c > 1:
                 print(f"{c} x ", end=" ")
             else:
                 print(" =", end=" ")
