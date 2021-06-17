@@ -13,16 +13,17 @@ ficha(nome, gols)
 '''
 
 
-def ficha(jog="<desconhecido>", gols=0)
+def ficha(jog="<desconhecido>", gols=0):
     print(f"o jogador {jog} fez {gols} gol(s) no campeonato.")
 
+
 n = str(input("Nome do jogador: "))
-g= int(input("número de Gols: "))
+g = str(input("número de Gols: "))
 if g.isnumeric():
     g = int(g)
 else:
     g = 0
 if n.strip() == "":
-    ficha(gol=g)
+    ficha(gols=g)
 else:
     ficha(n,g)
