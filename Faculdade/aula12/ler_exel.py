@@ -55,7 +55,7 @@ for linha in range(2, 7):
   print("-------------------------------------")
 '''
 #Mudou aqui
-'''
+
 wb = load_workbook("C:\\abc\\alunos3.xlsx")
 
 ws = wb['Planilha1']
@@ -66,7 +66,7 @@ ws.column_dimensions['B'].width = 10
 ws.column_dimensions['C'].width = 10
 ws.column_dimensions['D'].width = 10
 
-for linha in range(2, 9):
+for linha in range(2, 10):
 
   aluno = ws.cell(column=1, row=linha).value
   nota1 = ws.cell(column=2, row=linha).value
@@ -92,9 +92,9 @@ for linha in range(2, 9):
   print("-------------------------------------")
 
   wb.save("C:\\abc\\alunos3.xlsx")
-'''
-#entregar
 
+#entregar
+'''
 wb = Workbook()
 ws = wb.active
 ws.title = "Planilha com Produtos"
@@ -136,6 +136,6 @@ ws.cell(row=linha, column=5, value=totGeral)
 ws.cell(row=linha, column=4, value="Total = ")
 wb.save("c:\\abc\\construção.xlsx")
 print ("Planilha salva em c:/abc/construção.xlsx")
-
+'''
 
 
