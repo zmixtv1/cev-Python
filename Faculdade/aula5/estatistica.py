@@ -1,3 +1,4 @@
+'''
 numero=int(input("Qual o número entre 0 e 100? "))
 
 if numero<0 or numero>100 :
@@ -26,11 +27,11 @@ else:
 
 
 # ABCAB
-'''
+
  A - 2 ocorrência(s) que corresponde a 40 %
  B - 2 ocorrência(s) que corresponde a 40 %
  C - 1 ocorrência(s) que corresponde a 20 %
-'''
+
 
 print('Digite uma frase qualquer:')
 f = input()
@@ -57,3 +58,4 @@ print ('Total=', soma)
 # tab[i] -- p
 # p * len(f) = tab[i] * 100
 # p = tab[i] * 100 / len(f)
+'''
