@@ -2,7 +2,7 @@
 
 
 class aluno(object):
-    def __init__(self,nome, mensalidade, idade):
+    def __init__(self, nome="undefined", mensalidade=1000.0, idade=18):
         self.nome = nome
         self.mensalidade = mensalidade
         self.idade = idade
@@ -34,7 +34,11 @@ class aluno(object):
        self.mensalidade += valor
     def aumento_mensalidade_porcet(self,porc):
         self.mensalidade += self.mensalidade * porc / 100
-
+    def pode_cnh(self):
+        if self.idade >= 18:
+            print("Pode!")
+        else:
+            print("Não Pode!")
 
 
 
@@ -51,6 +55,10 @@ class aluno(object):
 if __name__ == "__main__":
     aluno1 = aluno("Paulo", 1000.0, 21)
     aluno2 = aluno("Rodrigo", 900.0, 19)
+    aluno3 = aluno("Alaor")
+    aluno4 = aluno("Ana",idade=10)
+    aluno5 = aluno("Lopes",idade=21)
+
     '''print("aluno 1:")
     print("Nome:", aluno1.get_nome())
     print(f"idade: {aluno1.get_idade()}")
@@ -69,3 +77,7 @@ if __name__ == "__main__":
     print(aluno2.retorna_dados())
     aluno2.aumento_mensalidade_porcet(15)
     print(aluno2.retorna_dados())
+    print(aluno3.retorna_dados())
+    print(aluno5.retorna_dados())
+    aluno2.pode_cnh()
+    aluno4.pode_cnh()
