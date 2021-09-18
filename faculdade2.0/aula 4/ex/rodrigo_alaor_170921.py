@@ -38,6 +38,25 @@ class som_grave (object):
         dados = f"{self.modelo}, {self.potencia} rms, {self.tamanho}, R$ {self.valor}."
         return dados
 
+    def compara_valor(self, outro_objeto):
+        if self.valor > outro_objeto.valor:
+            print(f"grave mais caro: R$", self.valor)
+            print("grave mais barato R$", outro_objeto.valor)
+        elif self.valor < outro_objeto.valor:
+            print("grave mais caro: R$", outro_objeto.valor)
+            print("grave mais barato: R$", self.valor)
+        else:
+            print("Tem o mesmo valor.")
+
+    def compara_potencia(self, outro_objeto):
+        if self.potencia > outro_objeto.potencia:
+            print("grave mais potente: ",self.potencia)
+            print("grave  menos potente: ",outro_objeto.potencia)
+        elif self.potencia < outro_objeto.potencia:
+            print("grave mais potente: ", outro_objeto.potencia)
+            print("grave menos potente: ", self.potencia)
+        else:
+            print("Tem a mesma potencia.")
 
 
 
@@ -51,3 +70,7 @@ if __name__ == "__main__":
     print("_"*30)
     print(grave1.retorna_dados())
     print(grave2.retorna_dados())
+    print("_"*30)
+    grave1.compara_valor(grave2)
+    print("_"*30)
+    grave1.compara_potencia(grave2)
