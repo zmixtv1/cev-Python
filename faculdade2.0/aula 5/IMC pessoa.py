@@ -1,7 +1,7 @@
 import datetime
 
 class pessoa(object):
-    def __init__(self, nome, peso, altura, data_de_nascimento):
+    def __init__(self, nome, peso, altura, data_de_nascimento = datetime.date(2000, 1, 21)):
         self.nome = nome
         self.peso = peso
         self.altura = altura
@@ -31,4 +31,3 @@ if __name__ == "__main__":
     print(f"Pessoa 1 = {nome}")
     pessoa1.set_nome("Jorge")
 
-    
