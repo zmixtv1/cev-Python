@@ -20,7 +20,14 @@ class pessoa(object):
         vl_imc = self.peso/(self.altura ** 2)
         return vl_imc
 
+    def __str__(self):
+        s = f"{self.nome}, {self.peso}, {self.data_de_nascimento}"
+        return s
 
+    def calcula_idade(self):
+        hoje = datetime.date.today()
+        idade = hoje.year - self.data_de_nascimento.year
+        return idade
 
 if __name__ == "__main__":
     data_de_nascimento = datetime.date(1993,12,13)
@@ -30,4 +37,5 @@ if __name__ == "__main__":
     nome = pessoa1.get_nome()
     print(f"Pessoa 1 = {nome}")
     pessoa1.set_nome("Jorge")
+
 
