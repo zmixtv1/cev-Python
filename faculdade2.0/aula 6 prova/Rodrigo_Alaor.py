@@ -60,6 +60,14 @@ for i, v in enumerate(valores):
 print()
 
 
+
+
+
+
+
+
+
+
 class livro(object):
     def __init__(self,titulo,autor,paginas,preco=100,quantidade=1):
         self.titulo = titulo
