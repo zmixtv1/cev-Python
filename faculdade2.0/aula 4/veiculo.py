@@ -36,7 +36,7 @@ class veiculo(object):
         self.valor += aumento_valor
 
     def compara_valor(self, outro_objeto):
-        if self.valo > outro_objeto.valor:
+        if self.valor > outro_objeto.valor:
             print("Carro masi caro: R$",self.valor)
             print("Carro mais barato R$",outro_objeto.valor)
         elif self.valor < outro_objeto.valor:
