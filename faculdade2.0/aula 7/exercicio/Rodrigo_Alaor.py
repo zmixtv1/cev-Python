@@ -72,7 +72,7 @@ class serie(object):
         elif serie3.nome == "Sex Education":
             print(f"{serie3.nome}: Série recomendada para adolescentes verem que sexo não é um tabu e a serie {serie3.nome} está disposta a discutir o tema.")
 
-    
+
 
 
 if __name__ == "__main__":
@@ -129,4 +129,3 @@ if __name__ == "__main__":
     serie1.compara_valor(serie2)
     serie1.compara_valor(serie3)
     serie2.compara_valor(serie3)
-
