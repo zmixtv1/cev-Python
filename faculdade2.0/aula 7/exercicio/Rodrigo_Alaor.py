@@ -8,7 +8,6 @@ class serie(object):
         self.temporada = temporada
         self.duracao = duracao
 
-
     def get_nome(self):
         return self.nome
     def get_valor(self):
@@ -53,6 +52,27 @@ class serie(object):
             print("plataforma mais barata: R$", self.valor)
         else:
             print("Tem o mesmo valor.")
+
+
+    def opniao1(self):
+        if serie1.nome == "Round 6":
+            print(f"{serie1.nome}: Não assisti a serie")
+        elif serie1.nome == "Grey's Anatomy":
+            print(f"{serie1.nome}: Se você gosta de series sobre hospitais, você vai amar esta série")
+
+        if serie2.nome == "Supernatural":
+            print(f"{serie2.nome}:Super recomendo se você gosta de ação com aventura, a historia conta "
+                  f"sobre dois irmão caçadores e sua jornada por salvar a terra dos monstros")
+        elif serie2.nome == "The Boys":
+            print(f"{serie2.nome}: Esta serie mostra o lado inverso dos super-heróis, os heróis que tambem fazem cagadas")
+
+        if serie3.nome == "Os Simpsons":
+            print(f"{serie3.nome}:Otima serie para assistir com a família")
+
+        elif serie3.nome == "Sex Education":
+            print(f"{serie3.nome}: Série recomendada para adolescentes verem que sexo não é um tabu e a serie {serie3.nome} está disposta a discutir o tema.")
+
+    
 
 
 if __name__ == "__main__":
@@ -110,4 +130,3 @@ if __name__ == "__main__":
     serie1.compara_valor(serie3)
     serie2.compara_valor(serie3)
 
-    
