@@ -106,3 +106,8 @@ if __name__ == "__main__":
     print(serie3.retorna_dados())
     print("-="*30)
 
+    serie1.compara_valor(serie2)
+    serie1.compara_valor(serie3)
+    serie2.compara_valor(serie3)
+
+    
