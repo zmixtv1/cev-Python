@@ -45,8 +45,8 @@ class serie(object):
 
     def compara_valor(self, outro_objeto):
         if self.valor > outro_objeto.valor:
-            print("plataforma maus cara: R$",self.valor)
-            print("plataforma mais barata: R$",outro_objeto.valor)
+            print("plataforma maus cara: R$", self.valor)
+            print("plataforma mais barata: R$", outro_objeto.valor)
         elif self.valor < outro_objeto.valor:
             print("Plataforma mais cara: R$", outro_objeto.valor)
             print("plataforma mais barata: R$", self.valor)
@@ -54,29 +54,34 @@ class serie(object):
             print("Tem o mesmo valor.")
 
 
-    def opniao1(self):
-        if serie1.nome == "Round 6":
+    def get_opniao(self):
+
+        if self.nome == "Round 6":
             print(f"{serie1.nome}: Não assisti a serie")
-        elif serie1.nome == "Grey's Anatomy":
+        elif self.nome == "Grey's Anatomy":
             print(f"{serie1.nome}: Se você gosta de series sobre hospitais, você vai amar esta série")
 
-        if serie2.nome == "Supernatural":
+        elif self.nome == "Supernatural":
             print(f"{serie2.nome}:Super recomendo se você gosta de ação com aventura, a historia conta "
                   f"sobre dois irmão caçadores e sua jornada por salvar a terra dos monstros")
-        elif serie2.nome == "The Boys":
-            print(f"{serie2.nome}: Esta serie mostra o lado inverso dos super-heróis, os heróis que tambem fazem cagadas")
+        elif self.nome == "The Boys":
+            print(
+                f"{serie2.nome}: Esta serie mostra o lado inverso dos super-heróis, os heróis que tambem fazem cagadas")
 
-        if serie3.nome == "Os Simpsons":
+        elif self.nome == "Os Simpsons":
             print(f"{serie3.nome}:Otima serie para assistir com a família")
 
-        elif serie3.nome == "Sex Education":
-            print(f"{serie3.nome}: Série recomendada para adolescentes verem que sexo não é um tabu e a serie {serie3.nome} está disposta a discutir o tema.")
+        elif self.nome == "Sex Education":
+            print(
+                f"{serie3.nome}: Série recomendada para adolescentes verem que sexo não é um tabu e a serie {serie3.nome} está disposta a discutir o tema.")
+
+        else:
+            print("Sem opniao cadastrada sobre a serie")
 
 
 
 
 if __name__ == "__main__":
-
     serie1 = serie("Round 6", 25.90, 2021)
     serie2 = serie("Supernatural", 9.90, 2005, 15, 38)
     serie3 = serie("Os Simpsons",  279.90, 1989, 33, 24)
@@ -98,6 +103,12 @@ if __name__ == "__main__":
     serie3.get_ano()
     serie3.get_temporada()
     serie3.get_duracao()
+
+    print("+_+" * 30)
+    serie1.get_opniao()
+    serie2.get_opniao()
+    serie3.get_opniao()
+    print("+_+" * 30)
     print("-="*30)
     print(serie1.retorna_dados())
     print(serie2.retorna_dados())
@@ -129,3 +140,12 @@ if __name__ == "__main__":
     serie1.compara_valor(serie2)
     serie1.compara_valor(serie3)
     serie2.compara_valor(serie3)
+
+    print("+_+"*30)
+    serie4 = serie("Hermanoteu", 2.50)
+    serie1.get_opniao()
+    serie2.get_opniao()
+    serie3.get_opniao()
+    serie4.get_opniao()
+
+
