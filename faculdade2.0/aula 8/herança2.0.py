@@ -1,6 +1,6 @@
 
 
-class funcionario(self):
+class funcionario(object):
     def __init__(self, cpf, nome ,salario=0.0):
         self.cpf = cpf
         self.nome = nome
@@ -24,18 +24,11 @@ class funcionario(self):
 
 class gerente(object):
     def __init__(self,cpf, nome, salario, senha, qtd_gerencia=0):
-        self.cpf = cpf
-        self.nome = nome
-        self.salario = salario
+
+        super().__init__(cpf, nome, salario)
         self.senha= senha
         self.qtd_gerencia = qtd_gerencia
 
-    def get_cpf(self):
-        return self.cpf
-    def get_nome(self):
-        return self.nome
-    def set_nome(self,novo_nome):
-        self.nome = novo_nome
     def get_salario(self):
         return self.salario
     def get_qtd_gerencia(self):
