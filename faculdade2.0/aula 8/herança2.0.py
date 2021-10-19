@@ -37,6 +37,7 @@ class gerente(object):
     def autentica(self):
         senha = input("Senha: ")
         
+        
 
 
 
