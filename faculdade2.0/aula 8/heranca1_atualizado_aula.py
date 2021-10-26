@@ -72,6 +72,11 @@ class Gerente(Funcionario):                         # class NomeSubclasse(NomeSu
 if __name__ == '__main__':
     f1 = Funcionario('123', 'Paulo', 1000.0)        # Cria o objeto f1, chama o construtor
     print(f1)                                       # print(f1.__str__())   # Teste
+    print("-=" * 30)
+    print(f"nome: {f1.get_nome()}")
+    f1.set_nome("Rodrigo")
+    print(f"Nome:", f1.get_nome())
+    print("-=" * 30)
     # <__main__.Funcionario object at 0x00000159D5FFB2C8>
     print(f'Nome: {f1.get_nome()}')
     print(f'CPF: {f1.get_cpf()}')
@@ -95,3 +100,8 @@ if __name__ == '__main__':
     print(g2.__str__())                             # print(g2), conseguiu usando o __str__?
     print('g2 - Nome:', g2.get_cpf())
     print('g2 - Nome:', g2.get_nome())
+
+
+
+    print("-="*30)
+    print(f"nome: {f1.get_nome()}")
