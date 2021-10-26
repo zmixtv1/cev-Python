@@ -37,9 +37,9 @@ class serie(object):
 
     def retorna_dados(self):
         if self.valor < 80:
-            dados = f"Nome: {self.nome}, Valor mensal: R${self.valor}, Anor: {self.ano}, Temporada: {self.temporada}, Duração: {self.duracao}min."
+            dados = f"Nome: {self.nome}, Valor mensal: R${self.valor}, Ano: {self.ano}, Temporada: {self.temporada}, Duração: {self.duracao}min."
         else:
-            dados = f"Nome: {self.nome}, Valor Anual: R${self.valor}, Anor: {self.ano}, Temporada: {self.temporada}, Duração: {self.duracao}min."
+            dados = f"Nome: {self.nome}, Valor Anual: R${self.valor}, Ano: {self.ano}, Temporada: {self.temporada}, Duração: {self.duracao}min."
         return dados
 
 
