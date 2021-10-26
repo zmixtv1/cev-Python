@@ -15,6 +15,30 @@ class veiculo(object):
     def get_km(self):
         return self.km
 
+    def atualiza_valor(self, vlr_aumento):
+        if isinstance(vlr_aumento,(int,float)):
+            if vlr_aumento > 0:
+                self.valor += vlr_aumento
+            else:
+                print("Erro: valor Negativo.")
+        else:
+            print("Erro: Valor não é int nem float")
+
+    def atualiza_valor_pct(self, pct):
+        if pct > 0:
+            self.valor = self.valor + self.valor * pct /100
+        else:
+            print("Erro: valor negativo")
+
+    def situacao(self):
+        if self.km == 0:
+            print("Veiculo zero")
+        elif self.km <= 20000:
+            print("Veiculo seminovo")
+        else:
+            print("Veículo Usado.")
+            
+
 
 class carro(veiculo):
     def __init__(self,valor, modelo, km=1,qtd_portas=4):
@@ -71,3 +95,7 @@ if __name__ == "__main__":
     print(m1)
     m2 = moto(32000, "cbs", 12000, 400)
     print(m2)
+    print(vars(c1))
+    print(c1.__dict__)
+
+    c1.atualiza_valor(250)
