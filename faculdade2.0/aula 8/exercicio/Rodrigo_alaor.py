@@ -7,10 +7,13 @@ class jogo(object):
 
     def get_ano(self):
         return self.ano
+
     def get_criador(self):
         return self.criador
+
     def get_valor(self):
         return self.valor
+
     def set_valor(self,n_valor):
         self.valor = n_valor
         return self.valor
@@ -27,12 +30,9 @@ class pc(jogo):
         else:
             print("Não pode, não roda Jogos")
 
-
     def __str__(self):
         s = f"Ano: {self.ano}, Criador: {self.criador}, Valor: {self.valor}, Tem placa: {self.tem_placa}."
         return s
-
-
 
 
 class console(jogo):
@@ -42,6 +42,9 @@ class console(jogo):
 
     def get_qtd_controles(self):
         return self.qtd_controle
+    def set_qtd_controles(self,n_qtd):
+        self.qtd_controle = n_qtd
+        return self.qtd_controle
 
     def players(self):
         if self.qtd_controle == 1:
@@ -49,7 +52,7 @@ class console(jogo):
         elif self.qtd_controle == 2:
             print("Pode jogar somente dois players")
         elif self.qtd_controle == 3:
-            print("Pode jogar somente treis players")
+            print("Pode jogar somente três players")
         elif self.qtd_controle == 4:
             print("Pode jogar somente quatro players")
         else:
@@ -88,6 +91,6 @@ if __name__ == '__main__':
     print("_+" * 30)
 
     j2.get_qtd_controles()
+    j2.set_qtd_controles(3)
     j2.players()
-
     print(j2)
