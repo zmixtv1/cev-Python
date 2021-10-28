@@ -42,6 +42,7 @@ class console(jogo):
 
     def get_qtd_controles(self):
         return self.qtd_controle
+
     def set_qtd_controles(self,n_qtd):
         self.qtd_controle = n_qtd
         return self.qtd_controle
@@ -58,13 +59,9 @@ class console(jogo):
         else:
             print("Erro: O maximo de controles disponiveis são 4.")
 
-
     def __str__(self):
         s = f"Ano: {self.ano}, Criador: {self.criador}, Valor: {self.valor}, Quantidade de controles: {self.qtd_controle}."
         return s
-
-
-
 
 
 if __name__ == '__main__':
