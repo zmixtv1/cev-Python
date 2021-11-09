@@ -62,6 +62,7 @@ if __name__ == "__main__":
     conta1.transferencia(conta2,3000)
 '''
 
+
 class veiculo(object):
 
     qtd = 0
@@ -86,6 +87,7 @@ class veiculo(object):
 
     def set_preco(self,n_preco):
         self.preco = n_preco
+
 
 class carro(veiculo):
     def __init__(self,placa, preco, qtd_portas):
@@ -119,6 +121,7 @@ class onibus(veiculo):
     def __str__(self):
         p = f"Placa = {self.placa}, Preço = {self.capacidade}"
         return p
+
 
 if __name__ == "__main__":
 
