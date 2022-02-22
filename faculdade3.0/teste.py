@@ -37,4 +37,5 @@ class onibus(veiculo):
         self.capacidade = capacidade
         super().__init__(placa,preco)
 
-    def get_capacidade
+    def get_capacidade(self):
+        return self.capacidade
