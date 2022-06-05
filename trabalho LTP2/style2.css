@@ -52,48 +52,46 @@ header img{
     width: 150px;
 }
 
-.home{
-    height: 150px;
-    text-align: center;
-    background-image: url(./imgs/fundo.jpg);
-    background-attachment: fixed;
-    background-position: center 1100px;
-    height: 30vh;
+.opcao{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
+
 }
 
-h1{
-    padding: 10px;
-    color: white;
-    backdrop-filter: blur(3px) saturate(200%);
-    -webkit-backdrop-filter: blur(3px) saturate(200%);
-    background-color: rgba(17, 25, 40, 0.50);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+#selectable{
+    text-align: center;
 }
 
-section{
-    margin: auto;
-    max-width: 900px;
-    border-style: double;
-    margin-top: 1.5rem;
-    border-color: #b88d4d;
-    border-width: 8px;
-    margin-bottom: 20px;
-    padding: 5px 15px;
-}
 
-h3{
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-}
 
-.sobre p{
-    text-indent: 1.5em;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .content-center{
     background-color: #b88d4dbd;
@@ -131,11 +129,6 @@ a{
 
 .sociais{
     margin: 0px 10px ;
-}
-
-.ui-state-active{
-    background: #b88d4d;
-    border: 1px solid #000000;
 }
 
 @media screen and (max-width:1026px){
