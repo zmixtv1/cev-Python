@@ -34,7 +34,7 @@
                     <a href="./Home.html">Home</a>
                 </li>
                 <li>
-                    <a href="#sobre">Sobre</a>
+                    <a href="./Home.html#sobre">Sobre</a>
                 </li>
                 <li>
                     <a href="./encomendar.html">Encomendar</a>
@@ -100,6 +100,18 @@
                     <div class="inputBox">
                         <input type="text" name="endereco" id="endereco" class="inputUser" required>
                         <label for="endereco" class="labelInput">Endereço</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="mtd_pagamento">Método de Pagamento:</label>
+                        <select name="pagamento" id="pagamento">
+                            <option value="dinheiro">Dinheiro</option>
+                            <option value="pix" selected>Pix</option>
+                            <option value="credito">Maquina credito</option>
+                            <option value="debito">Maquina debito</option>
+                            <option value="vale">vale-refeição</option>
+                        </select>
+                        
                     </div>
                     <br><br>
                     <input type="submit" name="submit" id="submit">
