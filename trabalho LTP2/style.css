@@ -138,7 +138,7 @@ a{
     border: 1px solid #000000;
 }
 
-@media screen and (max-width:1026px){
+@media screen and (max-width:1043px){
     .menu{
         display: block;
         text-align: center;

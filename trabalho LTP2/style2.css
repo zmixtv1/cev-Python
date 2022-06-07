@@ -225,7 +225,7 @@ a{
     margin: 0px 10px ;
 }
 
-@media screen and (max-width:1026px){
+@media screen and (max-width:1043px){
     .menu{
         display: block;
         text-align: center;
