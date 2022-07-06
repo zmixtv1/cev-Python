@@ -152,9 +152,94 @@ legend{
 }
 
 .quantidade{
-    
+
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-center{
+    background-color: #b88d4dbd;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 15px 0px;
+    box-sizing: border-box;
+}
+
+.opcao{
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+    word-break: break-word;
+}
+
+.redes{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+a{
+    margin-top: 10px;
+    color: black;
+}
+
+.sociais{
+    margin: 0px 10px ;
+}
+
+@media screen and (max-width:1043px){
+    .menu{
+        display: block;
+        text-align: center;
+        padding: 1px;
+    }
+
+    .redes{
+        font-size: 15px;
+    }
+
+    .content-center{
+        display: block;
+    }
+}
 
 
 
