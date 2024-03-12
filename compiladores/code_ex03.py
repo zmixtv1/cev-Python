@@ -36,7 +36,7 @@ def main():
         elif resultados[i] == barra_abrir:
             print("( => abre parênteses")
         elif resultados[i] == espaco:
-            print(" => espaço em branco")
+            print("____ => espaço em branco")
         else:
             print('elemento desconhecido')
 
