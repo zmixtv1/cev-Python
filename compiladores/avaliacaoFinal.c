@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include stdio.h
-#include string.h
+#include <string.h>
+#include <ctype.h>  // Para a função isalpha
 
 #define MAX_SIZE 100
 
@@ -9,29 +9,24 @@
 #define DIREITA 2
 
 // Declaração da pilha
-typedef struct _Pilha
-{
+typedef struct _Pilha {
     char pilha[MAX_SIZE];
     int topo;
 } Pilha;
 
 // Função para inicializar a pilha
-void inicializarPilha(Pilha *pilha)
-{
+void inicializarPilha(Pilha *pilha) {
     pilha->topo = 0;
 }
 
 // Função para verificar se a pilha está vazia
-int pilhaVazia(Pilha *pilha)
-{
+int pilhaVazia(Pilha *pilha) {
     return pilha->topo == 0;
 }
 
 // Função para empilhar um elemento na pilha
-void empilhar(Pilha *pilha, char elemento)
-{
-    if (pilha->topo >= MAX_SIZE)
-    {
+void empilhar(Pilha *pilha, char elemento) {
+    if (pilha->topo >= MAX_SIZE) {
         printf("Erro: Pilha cheia!\n");
         return;
     }
@@ -41,10 +36,8 @@ void empilhar(Pilha *pilha, char elemento)
 }
 
 // Função para desempilhar um elemento da pilha
-char desempilhar(Pilha *pilha)
-{
-    if (pilhaVazia(pilha))
-    {
+char desempilhar(Pilha *pilha) {
+    if (pilhaVazia(pilha)) {
         printf("Erro: Pilha vazia!\n");
         return '\0';
     }
@@ -54,86 +47,66 @@ char desempilhar(Pilha *pilha)
 }
 
 // Função para verificar a precedência de um operador
-int precedenciaOperador(char operador)
-{
-    switch (operador)
-    {
-    case '^':
-        return 4;
-    case '*':
-    case '/':
-        return 3;
-    case '+':
-    case '-':
-        return 2;
-    case '(':
-    case ')':
-        return 1;
-    default:
-        return 0;
+int precedenciaOperador(char operador) {
+    switch (operador) {
+        case '^':
+            return 4;
+        case '*':
+        case '/':
+            return 3;
+        case '+':
+        case '-':
+            return 2;
+        default:
+            return 0;
     }
 }
 
 // Função para verificar a associatividade de um operador
-int associatividadeOperador(char operador)
-{
-    switch (operador)
-    {
-    case '^':
-        return DIREITA;
-    case '*':
-    case '/':
-        return ESQUERDA;
-    case '+':
-    case '-':
-        return ESQUERDA;
-    default:
-        return DIREITA;
+int associatividadeOperador(char operador) {
+    switch (operador) {
+        case '^':
+            return DIREITA;
+        case '*':
+        case '/':
+        case '+':
+        case '-':
+            return ESQUERDA;
+        default:
+            return DIREITA;
     }
 }
 
 // Função para converter expressão infixa para pós-fixa
-char *converterInfixaParaPosfixa(char expressaoInfixa[])
-{
+char *converterInfixaParaPosfixa(char expressaoInfixa[]) {
+    static char expressaoPosfixa[MAX_SIZE];  // Usando static para retornar a string
     Pilha pilha;
     inicializarPilha(&pilha);
 
-    char expressaoPosfixa[MAX_SIZE];
     int i = 0, j = 0;
 
-    while (expressaoInfixa[i] != '\0')
-    {
+    while (expressaoInfixa[i] != '\0') {
         char caractereAtual = expressaoInfixa[i];
 
-        if (caractereAtual >= 'a' && caractereAtual <= 'z' || caractereAtual >= 'A' && caractereAtual <= 'Z')
-        {
+        if (isalpha(caractereAtual)) {
             // Operando
             expressaoPosfixa[j++] = caractereAtual;
-        }
-        else if (caractereAtual == '(')
-        {
+        } else if (caractereAtual == '(') {
             // Parêntese de abertura
             empilhar(&pilha, caractereAtual);
-        }
-        else if (caractereAtual == ')')
-        {
+        } else if (caractereAtual == ')') {
             // Parêntese de fechamento
-            while (!pilhaVazia(&pilha) && desempilhar(&pilha) != '(')
-            {
-                expressaoPosfixa[j++] = desempilhar(&pilha);
+            char topo;
+            while ((topo = desempilhar(&pilha)) != '(') {
+                if (pilhaVazia(&pilha)) {
+                    printf("Erro: Parênteses não balanceados!\n");
+                    return NULL;
+                }
+                expressaoPosfixa[j++] = topo;
             }
-
-            if (pilhaVazia(&pilha))
-            {
-                printf("Erro: Parênteses não balanceados!\n");
-                return NULL;
-            }
-        }
-        else if (caractereAtual == '+' || caractereAtual == '-' || caractereAtual == '*' || caractereAtual == '/' || caractereAtual == '^')
-        {
+        } else if (caractereAtual == '+' || caractereAtual == '-' || caractereAtual == '*' || caractereAtual == '/' || caractereAtual == '^') {
             // Operador
-            while (!pilhaVazia(&pilha) && precedenciaOperador(desempilhar(&pilha)) >= precedenciaOperador(caractereAtual) && associatividadeOperador(desempilhar(&pilha)) != DIREITA)
-            {
+            while (!pilhaVazia(&pilha) && precedenciaOperador(pilha.pilha[pilha.topo - 1]) >= precedenciaOperador(caractereAtual) && associatividadeOperador(pilha.pilha[pilha.topo - 1]) == ESQUERDA) {
                 expressaoPosfixa[j++] = desempilhar(&pilha);
             }
 
@@ -144,8 +117,7 @@ char *converterInfixaParaPosfixa(char expressaoInfixa[])
     }
 
     // Desempilhar os operadores restantes na pilha
-    while (!pilhaVazia(&pilha))
-    {
+    while (!pilhaVazia(&pilha)) {
         expressaoPosfixa[j++] = desempilhar(&pilha);
     }
 
@@ -154,17 +126,17 @@ char *converterInfixaParaPosfixa(char expressaoInfixa[])
     return expressaoPosfixa;
 }
 
-int main()
-{
+int main() {
     char expressaoInfixa[MAX_SIZE];
 
     printf("Digite a expressão infixa: ");
-    gets(expressaoInfixa);
+    fgets(expressaoInfixa, MAX_SIZE, stdin);
+    // Remover o caractere de nova linha, se presente
+    expressaoInfixa[strcspn(expressaoInfixa, "\n")] = '\0';
 
     char *expressaoPosfixa = converterInfixaParaPosfixa(expressaoInfixa);
 
-    if (expressaoPosfixa != NULL)
-    {
+    if (expressaoPosfixa != NULL) {
         printf("Expressão pós-fixa: %s\n", expressaoPosfixa);
     }
 
