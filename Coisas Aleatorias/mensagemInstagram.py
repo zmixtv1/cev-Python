@@ -1,6 +1,7 @@
 import csv
 import time
 import os
+from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -8,10 +9,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 
+load_dotenv()
 # Configurações
 ARQUIVO_CSV = "seguidores_ninh.404.csv"
-USUARIO = os.getenv("USUARIO")
-SENHA = os.getenv("SENHA")
+USUARIO = os.getenv("Usuario")
+SENHA = os.getenv("Senha")
 INTERVALO_ENTRE_USUARIOS = 60  # segundos
 MENSAGEM_PADRAO = "Olá {nome}, tudo bem?"
 
